@@ -10,14 +10,20 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            ForEach(0..<10) { pos in
-                Text("Number \(pos)")
-                    .alignmentGuide(.leading) { _ in CGFloat(pos) * 20 }
-            }        }
-        .background(Color.red)
-        .frame(width: 400, height: 400)
-        .background(Color.blue)
+        HStack {
+            VStack {
+                Text("@twostraws")
+                Image("Swift")
+                    .resizable()
+                    .frame(width: 64, height: 64)
+            }
+
+            VStack {
+                Text("Full name:")
+                Text("Iurie Guzun")
+                    .font(.largeTitle)
+            }
+        }
     }
 }
 
